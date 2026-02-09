@@ -6,6 +6,7 @@
 ## 1. Purpose
 
 The Tech4Life Product Factory defines the **standardized, repeatable, and ethical process** by which ideas become licensable products under the TOIL framework.
+Products are licensed under the Tech4Life Open Impact License (TOIL).
 
 This system ensures that:
 - Innovation is scalable
@@ -190,4 +191,3 @@ Changes must:
 
 **We do not mass-produce products.
 We cultivate meaningful innovations.**
-
