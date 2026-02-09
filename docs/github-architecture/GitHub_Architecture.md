@@ -98,6 +98,9 @@ Tech4Life/
 │   └── Contributor-Levels.md
 ```
 
+**Target state (planned):** The structure above represents the intended multi-repo layout.  
+**Current state:** This repository currently hosts the TLOS docs in `/docs` and a root `README.md`.
+
 ---
 
 ## 5. Access Control Model
@@ -174,4 +177,3 @@ Any change requires:
 
 **GitHub is our memory.
 We do not erase memory.**
-
