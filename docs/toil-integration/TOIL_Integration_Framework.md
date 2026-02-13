@@ -1,3 +1,12 @@
+---
+document-id: TLOS-TOIL-INT-001
+version: 1.0.0
+status: Normative
+effective-date: 2026-02-13
+last-reviewed: 2026-02-13
+owner: Tech4Life Governance (TLOS) + Legal Steward
+---
+
 # Tech4Life Operating System (TLOS)
 ## TOIL Integration Framework
 
@@ -32,16 +41,26 @@ TOIL acts as:
 
 ---
 
-## 3. Scope of TOIL Coverage
+## 3. Default Scope Rule (Canonical)
 
-TOIL applies to:
+**Default rule:** Any asset created within Tech4Life & Beyond is governed by TOIL by default.
+
+This includes:
 - Physical products
 - Digital products
 - Designs and schematics
 - Documentation
 - Processes and systems
 
-Anything created within Tech4Life & Beyond falls under TOIL unless explicitly stated otherwise.
+### 3.1 Exceptions (Allowed, but controlled)
+
+An exception is allowed only if it is:
+1. **Explicitly documented** (scope + reason)
+2. **Approved under governance procedure**
+3. **Recorded with effective date** and owner sign-off
+4. **Traceable** (stored in GitHub with a permanent reference)
+
+If no exception record exists, TOIL applies.
 
 ---
 

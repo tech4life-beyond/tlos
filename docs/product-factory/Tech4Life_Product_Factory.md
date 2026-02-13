@@ -1,20 +1,25 @@
+---
+document-id: TLOS-FACTORY-001
+version: 1.0.0
+status: Normative
+effective-date: 2026-02-13
+last-reviewed: 2026-02-13
+owner: Tech4Life Governance (TLOS)
+---
+
 # Tech4Life Operating System (TLOS)
-## BLOCK 7 — Product Factory
+## BLOCK 7 — Product Factory (Implementation Profile)
 
 ---
 
 ## 1. Purpose
 
-The Tech4Life Product Factory defines the **standardized, repeatable, and ethical process** by which ideas become licensable products under the TOIL framework.
-Products are licensed under the Tech4Life Open Impact License (TOIL).
+The Tech4Life Product Factory defines the **standardized, repeatable, and ethical operating model** by which ideas become licensable products under the TOIL framework.
 
-This system ensures that:
-- Innovation is scalable
-- Quality is consistent
-- Ethics are enforced
-- Contributors are protected
+**Canonical lifecycle authority:** The Product Factory operates using the **9-stage Product Creation Pipeline** defined in:
+- `docs/product-pipeline/Product_Creation_Pipeline.md` (PCL — canonical)
 
-The Product Factory is the **engine** of Tech4Life & Beyond.
+This Factory document is an **implementation profile**: it explains *how* we execute the lifecycle without redefining it.
 
 ---
 
@@ -30,7 +35,7 @@ Creation follows responsibility, not ambition.
 ## 3. Entry Point — Idea Submission
 
 ### Who Can Submit
-- Contributors (all levels)
+- Contributors
 - Creators
 - Architects
 
@@ -89,19 +94,17 @@ Ownership is **collective**, authorship is **credited individually**.
 
 ---
 
-## 7. Standard Product Pipeline
+## 7. Factory Execution Profile (Maps to Canonical Pipeline)
 
-Every product follows the same pipeline:
+This section maps how the factory *executes* the canonical pipeline stages (PCL).
+It does **not** replace or redefine the pipeline.
 
-1. Idea Validation
-2. Architecture Design
-3. Prototype Development
-4. Testing & Review
-5. Documentation Completion
-6. TOIL Registration
-7. Licensing Readiness
-
-Skipping steps is not allowed.
+- Stages 1–3: Intake + ethics + concept hardening
+- Stage 4: Cell formation + stewardship assignment
+- Stages 5–6: Build + validate + document
+- Stage 7: TOIL registration package completion
+- Stage 8: Licensing prep package generation
+- Stage 9: Stewardship loop (monitoring + remediation)
 
 ---
 
@@ -112,12 +115,13 @@ Before release, the following must exist:
 - TOIL Registration Record
 - Technical Summary
 - Ethical Compliance Statement
-- Sell Sheet (1 page)
-- Licensing Disclaimer
+- Licensing Readiness Documentation
 
 Optional:
+- Sell Sheet
 - Pitch Deck
-- Prototype files
+- Prototype status
+- Royalty model
 
 ---
 
@@ -169,7 +173,7 @@ Only then may it be presented to manufacturers.
 
 Royalty distribution applies only if:
 - Product is licensed commercially
-- Contributors signed Collaboration Agreement
+- Contributors signed Collaboration Agreement (or equivalent governance-approved instrument)
 
 Royalties are tied to:
 - Contribution
