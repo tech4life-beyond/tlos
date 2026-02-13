@@ -1,14 +1,14 @@
 ---
-document-id: TLOS-PCL-001
+document_id: TLOS-PCL-001
+classification: Normative
+status: Active
 version: 1.0.0
-status: Normative
-effective-date: 2026-02-13
-last-reviewed: 2026-02-13
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
 owner: Tech4Life Governance (TLOS)
 ---
-
 # Tech4Life Operating System (TLOS)
-## Product Creation Pipeline (Canonical Lifecycle)
+## Product Creation Pipeline
 
 ---
 
@@ -26,16 +26,7 @@ No product exists within Tech4Life & Beyond unless it passes through this pipeli
 
 ---
 
-## 2. Canonical Authority (Precedence)
-
-This document defines the **canonical Product Creation Lifecycle (PCL)** consisting of **nine (9) stages**.
-
-- Any other TLOS document describing “factory steps” is an **implementation profile** and **must not redefine stages**.
-- If any conflict exists, **this document prevails**.
-
----
-
-## 3. Core Principles
+## 2. Core Principles
 
 - Ethics precede innovation
 - Documentation precedes execution
@@ -46,7 +37,7 @@ Speed is never prioritized over responsibility.
 
 ---
 
-## 4. Pipeline Overview (9 Stages)
+## 3. Pipeline Overview (Canonical)
 
 Every product follows the same lifecycle:
 
@@ -62,7 +53,7 @@ Every product follows the same lifecycle:
 
 ---
 
-## 5. Stage 1 — Idea Submission
+## 4. Stage 1 — Idea Submission
 
 Any Creator or Contributor may submit an idea.
 
@@ -76,7 +67,7 @@ Ideas without clear purpose are not advanced.
 
 ---
 
-## 6. Stage 2 — Ethical Pre-Evaluation
+## 5. Stage 2 — Ethical Pre-Evaluation
 
 Before any technical work begins, the idea undergoes an ethical review.
 
@@ -90,7 +81,7 @@ If ethical concerns are unresolved, the idea is paused or rejected.
 
 ---
 
-## 7. Stage 3 — Concept Definition
+## 6. Stage 3 — Concept Definition
 
 The idea is refined into a clear concept.
 
@@ -104,7 +95,7 @@ The output is a Concept Definition Document (CDD).
 
 ---
 
-## 8. Stage 4 — Team Formation
+## 7. Stage 4 — Team Formation
 
 A voluntary micro-team is formed around the concept.
 
@@ -117,7 +108,7 @@ No one is assigned to a team. Participation is voluntary.
 
 ---
 
-## 9. Stage 5 — Design & Prototyping
+## 8. Stage 5 — Design & Prototyping
 
 The team designs and prototypes the product.
 
@@ -130,7 +121,7 @@ Prototypes must demonstrate feasibility, not perfection.
 
 ---
 
-## 10. Stage 6 — Validation & Documentation
+## 9. Stage 6 — Validation & Documentation
 
 The product is validated for:
 - Functionality
@@ -144,7 +135,7 @@ A product without documentation cannot proceed.
 
 ---
 
-## 11. Stage 7 — TOIL Registration
+## 10. Stage 7 — TOIL Registration
 
 Once validated, the product is registered under the Tech4Life Open Impact License (TOIL).
 
@@ -158,7 +149,7 @@ TOIL registration is required before any release.
 
 ---
 
-## 12. Stage 8 — Licensing Preparation
+## 11. Stage 8 — Licensing Preparation
 
 If the product is commercial:
 - Licensing packages are prepared
@@ -170,7 +161,7 @@ If the product is non-commercial:
 
 ---
 
-## 13. Stage 9 — Post-Release Stewardship
+## 12. Stage 9 — Post-Release Stewardship
 
 After release, the product remains under stewardship.
 
@@ -183,7 +174,7 @@ Creation responsibility does not end at release.
 
 ---
 
-## 14. Pipeline Integrity
+## 13. Pipeline Integrity
 
 Skipping stages is not permitted.
 
@@ -191,7 +182,7 @@ Any attempt to bypass the pipeline invalidates the product within Tech4Life & Be
 
 ---
 
-## 15. Living Pipeline
+## 14. Living Pipeline
 
 This pipeline evolves with experience.
 

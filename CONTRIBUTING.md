@@ -1,72 +1,68 @@
 # Contributing to TLOS
 
-TLOS (Tech4Life Operating System) is the **governance and doctrine** layer for the Tech4Life & Beyond ecosystem.
-Changes here affect downstream repositories (TOIL, product-registry, product-creation-pipeline, products, community, and product runtimes).
+This repository is the governance and doctrine layer for Tech4Life & Beyond.
 
-## Core rules
+## Scope
+- Governance standards
+- Normative doctrine (how we operate)
+- Factory standards (how we create products)
+- Terminology and definitions
+- Cross-repo operating contracts (high-level)
 
-1. **PRs only.** No direct commits to `main`.
-2. **Small, auditable changes.** Prefer multiple small PRs over one large PR.
-3. **Normative vs informative.**
-   - **Normative** statements define requirements (use **MUST / MUST NOT / SHOULD / MAY**).
-   - **Informative** statements explain context or rationale.
-4. **No silent breaking changes.** If a change alters meaning or expected behavior:
-   - update `CHANGELOG.md`
-   - add a migration note (what changed, who is impacted, what to do)
-   - version appropriately (see `RELEASING.md`)
-5. **Keep TLOS scoped.** TLOS is the source of truth for **governance standards** and **factory doctrine**, not for product-specific facts.
+## Contribution workflow
+1. Create a branch from `main`
+2. Make focused changes
+3. Ensure the repo remains internally consistent
+4. Open a Pull Request (PR)
+5. Merge only after checks pass and required reviewers approve
 
-## Branch naming
+## Document standards
 
-Use one of:
+### Normative vs informative
+- **Normative** documents define mandatory standards.
+- **Informative** documents explain, guide, or provide examples.
 
-- `tlos/p0-<short-scope>`
-- `tlos/p1-<short-scope>`
-- `tlos/p2-<short-scope>`
+If a document is normative, it must be auditable and versioned.
 
-Examples:
-- `tlos/p0-governance-baseline`
-- `tlos/p1-canonical-lifecycle-authority`
+### Required header metadata (for normative docs)
+Normative docs must include YAML front matter at the top of the file.
 
-## Commit message style
+Required structure:
 
-Use imperative, present tense:
+```yaml
+---
+classification: Normative
+status: Draft | Active | Deprecated
+version: 1.0.0
+effective_date: 2026-02-13
+owner: Tech4Life & Beyond LLC
+last_reviewed: 2026-02-13
+---
+```
 
-- `Add ...`
-- `Fix ...`
-- `Clarify ...`
-- `Document ...`
+### Optional (recommended)
 
-## Documentation style guide
+```yaml
+document_id: TLOS-<AREA>-###
+```
 
-### File structure
-- Keep documents under `docs/<topic>/`.
-- Add new topics only when necessary (avoid deep nesting).
+Stable identifier for audit trails.
 
-### Required header metadata (for **normative** docs)
-At the top of each normative document, include:
-
-- **Status:** Draft | Active | Deprecated
-- **Version:** `vX.Y`
-- **Effective date:** `YYYY-MM-DD`
-- **Owner:** `Tech4Life & Beyond LLC`
-- **Last reviewed:** `YYYY-MM-DD`
+**Rule:** The required keys must exist and must be accurate.
 
 ### Language
-- Use clear, unambiguous language.
-- Prefer short paragraphs and bullets.
-- Define terms once in `docs/glossary.md` and use them consistently.
+- Use clear and unambiguous wording.
+- Normative statements should use **MUST / SHOULD / MAY** where appropriate.
+- Avoid vague wording ("some", "often", "usually") in normative rules.
 
-## Review checklist (before you open a PR)
+## Review checklist
+Before opening a PR, confirm:
+- [ ] Links work
+- [ ] Normative docs include required metadata
+- [ ] No contradictions introduced (pipeline, TOIL, governance, roles)
+- [ ] Version references are consistent
+- [ ] Changes are documented in `CHANGELOG.md` when doctrinal
 
-- [ ] Does the change alter a requirement? If yes: updated `CHANGELOG.md` and added migration notes.
-- [ ] Are links valid?
-- [ ] Are terms consistent with `docs/glossary.md`?
-- [ ] If you introduced/changed policy language: did you update version/effective date?
-
-## Reporting issues
-
-Open a GitHub Issue with:
-- what is wrong
-- where (file + section)
-- the proposed fix (ideal wording)
+## Governance note
+TLOS is a governance repo. Small wording changes can create real operational drift.
+Prefer smaller PRs and explicit rationales.

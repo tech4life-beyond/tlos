@@ -1,12 +1,12 @@
 ---
-document-id: TLOS-GOV-001
+document_id: TLOS-GOV-001
+classification: Normative
+status: Active
 version: 1.0.0
-status: Normative
-effective-date: 2026-02-13
-last-reviewed: 2026-02-13
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
 owner: Tech4Life Governance (TLOS)
 ---
-
 # Tech4Life Operating System (TLOS)
 ## Governance Model
 
@@ -142,7 +142,7 @@ Removal is not punishment. It is protection of the system.
 
 ---
 
-## 9. Founder Role (Controlled Exception)
+## 9. Founder Role
 
 The founder does not hold unilateral authority.
 
@@ -151,34 +151,12 @@ The founder acts as:
 - Custodian of the Foundation
 - Steward of long-term coherence
 
-### 9.1 When intervention is allowed (Triggers)
-
-The founder may intervene only when at least one of the following is true:
+The founder may intervene only when:
 - Core principles are at risk
 - Ethical integrity is threatened
-- The system is being distorted in a way that endangers mission, safety, or enforceability
-- A time-critical safety or legal risk requires immediate containment
+- The system is being distorted
 
-### 9.2 Required procedure (Minimum Controls)
-
-Any founder intervention must include:
-1. **Written justification** (what happened, why it triggers intervention)
-2. **Scope** (what is being paused/overridden and for how long)
-3. **Impact statement** (who is affected)
-4. **A record** created in GitHub (issue or ADR reference) to preserve traceability
-
-### 9.3 Review and sunset
-
-- The intervention must be reviewed by relevant stewards/architects as soon as practical.
-- If no review occurs, the intervention must expire (“sunset”) and revert to the last stable governance state.
-
-### 9.4 Appeal path
-
-Any affected participant may request an appeal.
-Appeals must:
-- be documented
-- include a reasoned objection (ethics/safety/system harm)
-- be reviewed under consent/consensus rules depending on impact level
+Such interventions must be documented and justified.
 
 ---
 

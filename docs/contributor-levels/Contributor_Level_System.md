@@ -1,179 +1,87 @@
+---
+document_id: TLOS-LEVELS-001
+classification: Normative
+status: Active
+version: 1.0.0
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
+owner: Tech4Life & Beyond LLC
+---
 # Tech4Life Operating System (TLOS)
 ## Contributor Level System
 
----
 
-## 1. Purpose of the Level System
+## 1. Purpose
 
-The Contributor Level System exists to:
-- Enable participation without hierarchy
-- Protect ethical coherence
-- Match access with responsibility
-- Support personal and collective growth
+The Contributor Level System defines participation roles, permissions, and expectations within Tech4Life & Beyond.
 
-Levels are **not ranks**. They do not grant power over others.
-
-Levels define **access, responsibility, and scope of contribution**.
+It exists to:
+- protect contributors
+- prevent exploitation
+- ensure ethical and operational quality
+- enable safe scaling
 
 ---
 
-## 2. Core Principles
+## 2. Levels
 
-- No level is superior to another
-- Every level serves the system
-- Movement between levels is fluid and voluntary
-- No participant is locked into a role
-- Responsibility increases with access
+### Level 0 — Observer
+Observers can:
+- read public materials
+- propose ideas through sponsored contributors
 
----
+Observers cannot:
+- submit product packs directly
+- access restricted repositories
 
-## 3. Level Overview
+### Level 1 — Contributor
+Contributors can:
+- submit ideas
+- participate in product cells
+- contribute documentation and research
 
-The system is composed of four participation levels:
+Contributors must:
+- follow governance and ethical constraints
+- document contributions
 
-1. Observer
-2. Contributor
-3. Creator
-4. Architect
+### Level 2 — Creator
+Creators can:
+- initiate product packs
+- lead technical work inside a product cell
+- propose licensing readiness for review
 
-Each level is defined by:
-- Access
-- Responsibilities
-- Requirements
-- Scope of impact
+Creators must:
+- maintain documentation completeness
+- pass ethical and quality reviews
 
----
+### Level 3 — Architect
+Architects can:
+- approve governance-impact changes
+- approve factory profiles and lifecycle mappings
+- approve release-gate policy changes
+- steward system coherence across repos
 
-## 4. Level 1 — Observer
-
-### Description
-
-Observers are individuals who are exploring Tech4Life & Beyond.
-
-They seek understanding before contribution.
-
-### Access
-- Foundation document
-- Public TOIL principles
-- Introductory materials
-- Non-sensitive documentation
-
-### Responsibilities
-- Ethical alignment
-- Respect for principles
-
-### Notes
-
-Observers do not contribute to products or decision-making.
+Architects must:
+- prevent drift across ecosystem standards
+- document decisions (ADR where required)
 
 ---
 
-## 5. Level 2 — Contributor
+## 3. Promotion and gates
 
-### Description
-
-Contributors actively support projects through specific contributions.
-
-They collaborate without ownership or leadership responsibilities.
-
-### Access
-- Project documentation (partial)
-- Issue tracking and discussions
-- Collaboration tools
-
-### Responsibilities
-- Ethical conduct
-- Respect for TOIL
-- Clear attribution of work
-
-### Requirements
-- Acceptance of TOIL
-- Basic ethical orientation
+Promotion is not automatic.
+Promotion requires:
+- evidence of competence
+- evidence of ethical alignment
+- peer review
+- governance approval
 
 ---
 
-## 6. Level 3 — Creator
+## 4. Living system
 
-### Description
-
-Creators initiate and shape products, systems, or ideas.
-
-They may form and facilitate micro-teams.
-
-### Access
-- Full project documentation
-- Product creation templates
-- TOIL registration workflows
-- Royalty participation frameworks
-
-### Responsibilities
-- Ethical evaluation of creations
-- Documentation of decisions
-- Care for team well-being
-
-### Requirements
-- Demonstrated contribution history
-- Completion of foundational Armanu curriculum
-- Peer recognition
-
----
-
-## 7. Level 4 — Architect
-
-### Description
-
-Architects steward the Tech4Life system itself.
-
-They design, evolve, and protect the TLOS.
-
-### Access
-- Core operational documents
-- Governance mechanisms
-- System-level decision processes
-
-### Responsibilities
-- Protect ethical integrity
-- Prevent power concentration
-- Maintain systemic coherence
-
-### Requirements
-- Long-term commitment
-- Deep ethical alignment
-- Manual approval
-
----
-
-## 8. Movement Between Levels
-
-Participants may move between levels:
-- Upward through contribution and alignment
-- Downward by choice or life circumstance
-
-Movement is never punitive.
-
----
-
-## 9. Exit and Autonomy
-
-Participation in Tech4Life & Beyond is voluntary.
-
-Any participant may leave at any time.
-
-Contributions already made remain protected under TOIL.
-
----
-
-## 10. Living System
-
-This level system evolves with experience.
-
-Any changes must:
-- Preserve horizontal leadership
-- Avoid hierarchy
-- Protect human dignity
-
----
-
-**Access grows with responsibility.
-Responsibility grows with consciousness.**
-
+This system evolves as Tech4Life grows.
+All changes must remain aligned with:
+- Foundation principles
+- Governance Model
+- Product Creation Lifecycle
