@@ -1,12 +1,12 @@
 ---
-document-id: TLOS-GH-ARCH-001
+document_id: TLOS-GH-ARCH-001
+classification: Normative
+status: Active
 version: 1.0.0
-status: Normative
-effective-date: 2026-02-13
-last-reviewed: 2026-02-13
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
 owner: Tech4Life Governance (TLOS)
 ---
-
 # Tech4Life Operating System (TLOS)
 ## BLOCK 8 — GitHub Architecture
 
@@ -14,7 +14,7 @@ owner: Tech4Life Governance (TLOS)
 
 ## 1. Purpose
 
-This document defines GitHub as the **single source of truth for governance, specs, and product records** within the Tech4Life & Beyond ecosystem.
+This document defines GitHub as the **system of record** for Tech4Life & Beyond — where governance standards, products, registries, and controls are versioned, auditable, and traceable.
 
 GitHub is not only a code repository.
 It is:
@@ -22,10 +22,6 @@ It is:
 - A transparency layer
 - A timestamped public record
 - A protection mechanism for TOIL
-
-**Scope boundary (important):**
-- TLOS is the source of truth for *governance + standards*.
-- Product truth is carried by: `products` (packs) + `product-registry` (IDs/index) + audit-ready artifacts in `legal-private` and `finance-private`.
 
 ---
 
@@ -48,12 +44,11 @@ Purpose:
 - Transparency
 - Global visibility
 
-Includes (public repos):
-- Product dossiers/packs
-- Product registry index/exports
-- Licensing framework (TOIL)
-- Governance standards (TLOS)
-- Public community onboarding
+Includes:
+- Product TOIL registrations
+- Sell sheets
+- Public documentation
+- Ethical declarations
 
 ---
 
@@ -61,69 +56,66 @@ Includes (public repos):
 Purpose:
 - Active collaboration
 - Team coordination
-- Sensitive internal operations
+- Early-stage development
 
-Includes (private repos):
-- Curriculum and internal enablement
-- Finance operations and models
-- Legal operations and enforcement readiness
+Includes:
+- Work-in-progress designs
+- Internal discussions
+- Draft documentation
 
-Access is role-based and least-privilege.
+Access is level-based.
 
 ---
 
-### C. Core Layer (Protected Subset of Private)
+### C. Core Layer (Private)
 Purpose:
 - Protection of the operating system
 - Cultural and ethical coherence
-- Legal/financial defensibility
 
 Includes:
-- Legal enforcement artifacts
-- Investor-ready finance artifacts
-- Sensitive contributor/identity records (if introduced later)
+- TLOS documents
+- Governance model
+- Internal curriculum
+- Contributor evaluation logic
 
-Access is invitation-only and audited.
+Access is invitation-only.
 
 ---
 
-## 4. Official Repository Structure (Current State)
+## 4. Official Repository Structure (Current)
 
-**Current state (authoritative):** Tech4Life & Beyond operates as a **multi-repo ecosystem** under the GitHub organization `tech4life-beyond`.
+Tech4Life & Beyond is organized as a **multi-repo factory system** inside one GitHub organization.
 
 ### Public repositories (ecosystem base)
-- `tlos` — governance, doctrine, factory standards
-- `toil` — license + legal templates (public baseline)
-- `product-registry` — canonical product IDs + machine-readable exports
-- `product-creation-pipeline` — validator, rules, and CI gates for product packs
-- `products` — product packs/dossiers (per product folder)
-- `community` — onboarding, collaboration rules, contributor guidance
-- `kivai` — protocol/runtime infrastructure (product-level technical repo)
+- `tlos` — governance & doctrine (how we operate)
+- `toil` — legal/license baseline + templates
+- `product-registry` — canonical product ID registry + machine-readable exports
+- `product-creation-pipeline` — validation rules + tooling for product packs
+- `products` — product packs / dossiers (one folder per product)
+- `kivai` — interoperability protocol + runtime reference (product-specific)
+- `community` — onboarding, contribution pathways, and collaborator guidance
 
-### Private repositories (core operations)
-- `armanu-curriculum` — internal curriculum for capability progression
-- `finance-private` — monetization logic, registers, projections, reporting templates
-- `legal-private` — legal ops, enforcement playbooks, templates, evidence standards
+### Private repositories (strategic core)
+- `armanu-curriculum` — internal contributor capability progression & training ops
+- `finance-private` — financial ops, royalty controls, projections, investor reporting
+- `legal-private` — enforcement readiness, contract ops, IP chain-of-title controls
 
-**Source-of-truth mapping (must stay consistent):**
-- Governance standards: `tlos`
-- License baseline + public templates: `toil`
-- Canonical product IDs and registry exports: `product-registry`
-- Product packs (the dossiers that pipeline validates): `products`
-- Validation rules + tooling: `product-creation-pipeline`
-- People onboarding + collaboration model: `community`
-- Enforcement and confidential operations: `legal-private`, `finance-private`, `armanu-curriculum`
-
----
+**Rule:** GitHub is the auditable record. The *source of truth* is **distributed by domain**:
+- Governance truth → `tlos`
+- License truth → `toil`
+- Product identity truth → `product-registry`
+- Product-pack quality gates → `product-creation-pipeline`
+- Product dossiers → `products`
+- Legal/finance controls → private repos
 
 ## 5. Access Control Model
 
 Access is governed by contributor level:
 
 - Observer → Public Layer
-- Contributor → Public + limited collaboration areas (as defined in community)
-- Creator → Collaboration privileges + product workstreams (as granted)
-- Architect → Governance-impact privileges (as granted)
+- Contributor → Restricted Layer
+- Creator → Restricted + limited Core
+- Architect → Full Core access
 
 No one has automatic promotion.
 
@@ -133,14 +125,13 @@ No one has automatic promotion.
 
 Every contribution must:
 - Be committed under a real identity
-- Reference the contributor level (when relevant)
+- Reference the contributor level
 - Include a contribution summary
 
 GitHub commit history is considered a legal and ethical record.
 
 ---
 
-<a id="7-kivai-project-decision"></a>
 ## 7. Kivai Project Decision Framework
 
 Existing projects (e.g., Kivai) are evaluated by:
