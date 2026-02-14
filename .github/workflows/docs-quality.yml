@@ -1,0 +1,26 @@
+name: docs-quality
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate front matter, UTF-8, and anchors
+        run: python scripts/validate_docs.py
+
+      - name: Link check
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress --exclude-mail '**/*.md'

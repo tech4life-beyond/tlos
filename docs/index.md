@@ -5,23 +5,26 @@ status: Active
 version: 1.0.0
 effective_date: 2026-02-13
 last_reviewed: 2026-02-13
-owner: Tech4Life & Beyond LLC
+owner: Tech4Life Governance (TLOS)
+last_reviewed_by: optional
 ---
-# Documentation Index (Scope + Hierarchy)
+# TLOS Documentation Index
 
 ## What belongs in TLOS
-TLOS is the governance and doctrine source of truth.
+
+TLOS is the **governance and doctrine** layer for the Tech4Life ecosystem.
 
 TLOS contains:
-- Governance standards
-- Product lifecycle standards
-- Ethical doctrine
-- Role definitions
-- Cross-repo operating boundaries
+- Governance standards and decision logic
+- Normative doctrine (how we operate)
+- Factory standards (how we create products)
+- Terminology and definitions
+- Cross-repo operating contracts (high-level)
 
 TLOS does NOT contain:
-- Product dossiers (those live in `products`)
-- Product ID truth (that lives in `product-registry`)
+- Product-specific facts (those live in `products/` and the `product-registry` export)
+- Canonical legal templates (those live in `toil/` and `legal-private/`)
+- Financial models (canonical in `finance-private/`)
 - Implementation-specific runtime details (those live in product repos)
 
 ---
@@ -47,9 +50,19 @@ TLOS does NOT contain:
 
 ---
 
+## Authority matrix (owner by domain)
+
+| Domain | Canonical owner document | Notes |
+|---|---|---|
+| Governance | `docs/governance/TLOS_Governance_Model.md` | Decision model, intervention protocol, accountability. |
+| Legal / license baseline | `LICENSE.md` + `docs/toil-integration/TOIL_Integration_Framework.md` | Legal text in LICENSE, operational integration in TOIL framework. |
+| Registry / records | `docs/github-architecture/GitHub_Architecture.md` | Registry structure, repositories, traceability boundaries. |
+| Factory / lifecycle execution | `docs/product-pipeline/Product_Creation_Pipeline.md` | Canonical lifecycle authority; factory doc is implementation profile. |
+
+---
+
 ## Normative vs informative rule
-Normative statements MUST be auditable and written for compliance.
+Normative statements MUST be auditable and written for compliance.  
 Informative docs may explain, guide, or give examples.
 
 If unclear, treat the document as normative.
-
