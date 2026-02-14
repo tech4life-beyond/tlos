@@ -1,3 +1,13 @@
+---
+document_id: TLOS-CONTRIB-001
+classification: Normative
+status: Active
+version: 1.0.0
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
+owner: Tech4Life Governance (TLOS)
+last_reviewed_by: optional
+---
 # Contributing to TLOS
 
 This repository is the governance and doctrine layer for Tech4Life & Beyond.
@@ -25,44 +35,55 @@ This repository is the governance and doctrine layer for Tech4Life & Beyond.
 If a document is normative, it must be auditable and versioned.
 
 ### Required header metadata (for normative docs)
-Normative docs must include YAML front matter at the top of the file.
+
+Normative docs MUST include YAML front matter at the top of the file.
 
 Required structure:
 
 ```yaml
 ---
+document_id: TLOS-<AREA>-###      # stable identifier for audit trails
 classification: Normative
 status: Draft | Active | Deprecated
 version: 1.0.0
-effective_date: 2026-02-13
-owner: Tech4Life & Beyond LLC
-last_reviewed: 2026-02-13
+effective_date: YYYY-MM-DD
+last_reviewed: YYYY-MM-DD
+owner: <owner>
 ---
 ```
 
 ### Optional (recommended)
 
 ```yaml
-document_id: TLOS-<AREA>-###
+last_reviewed_by: <name or role>
 ```
 
-Stable identifier for audit trails.
+**Rule:** Required keys must exist and be accurate.
 
-**Rule:** The required keys must exist and must be accurate.
+### Normative language
+Use RFC-2119 style language in normative content:
+- **MUST / MUST NOT**: non-negotiable requirement or prohibition.
+- **SHOULD / SHOULD NOT**: strong recommendation; deviations require explicit rationale.
+- **MAY**: optional behavior.
 
-### Language
-- Use clear and unambiguous wording.
-- Normative statements should use **MUST / SHOULD / MAY** where appropriate.
-- Avoid vague wording ("some", "often", "usually") in normative rules.
+Do not use MUST/SHOULD/MAY for narrative text, examples, aspirations, or historical context.
+
+### Versioning rule
+TLOS normative documents use `MAJOR.MINOR.PATCH`.
 
 ## Review checklist
 Before opening a PR, confirm:
 - [ ] Links work
 - [ ] Normative docs include required metadata
 - [ ] No contradictions introduced (pipeline, TOIL, governance, roles)
-- [ ] Version references are consistent
-- [ ] Changes are documented in `CHANGELOG.md` when doctrinal
+- [ ] Versioning and changelog are updated if needed
+- [ ] ADR included for governance-impacting decisions
 
-## Governance note
-TLOS is a governance repo. Small wording changes can create real operational drift.
-Prefer smaller PRs and explicit rationales.
+## Pull requests
+PRs should include:
+- What changed
+- Why it changed
+- Whether it is breaking/additive/editorial
+- Any migration implications
+
+Use `.github/pull_request_template.md` checklist for doctrinal compliance.

@@ -1,12 +1,13 @@
 ---
-document-id: TLOS-TOIL-LICENSE-REF-001
+document_id: TLOS-TOIL-LICENSE-REF-001
+classification: Normative
+status: Active
 version: 1.0.0
-status: Normative
-effective-date: 2026-02-13
-last-reviewed: 2026-02-13
+effective_date: 2026-02-13
+last_reviewed: 2026-02-13
 owner: Tech4Life Legal Steward
+last_reviewed_by: optional
 ---
-
 # Tech4Life Open Impact License (TOIL) v1.0
 
 **Version:** 1.0  
@@ -25,7 +26,7 @@ TOIL balances openness with accountability. It protects creators, prevents misus
 
 ## 2. Scope (Canonical Default)
 
-This License governs inventions, designs, systems, prototypes, documentation, processes, and intellectual outputs created within Tech4Life & Beyond LLC by default, unless an explicit, documented exception exists.
+This License governs inventions, designs, systems, prototypes, documentation, processes, and intellectual outputs created within Tech4Life & Beyond LLC **by default**, unless an explicit, documented exception exists.
 
 It covers:
 
@@ -37,7 +38,7 @@ It covers:
 - Educational and methodological frameworks
 - Hybrid physical-digital systems
 
-Each Tech4Life product registered under TOIL is governed by this license. If no exception record exists, TOIL applies.
+Each published product registered under TOIL is governed by this license.
 
 ---
 

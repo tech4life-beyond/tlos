@@ -6,9 +6,11 @@ version: 1.0.0
 effective_date: 2026-02-13
 last_reviewed: 2026-02-13
 owner: Tech4Life Governance (TLOS)
+last_reviewed_by: optional
 ---
+
 # Tech4Life Operating System (TLOS)
-## BLOCK 8 — GitHub Architecture
+## Block 8: GitHub Architecture
 
 ---
 
@@ -22,6 +24,10 @@ It is:
 - A transparency layer
 - A timestamped public record
 - A protection mechanism for TOIL
+
+**Scope boundary (important):**
+- TLOS is the source of truth for *governance + standards*.
+- Product truth is carried by: `products` (packs) + `product-registry` (IDs/index) + audit-ready artifacts in `legal-private` and `finance-private`.
 
 ---
 
@@ -44,11 +50,12 @@ Purpose:
 - Transparency
 - Global visibility
 
-Includes:
-- Product TOIL registrations
-- Sell sheets
-- Public documentation
-- Ethical declarations
+Includes (public repos):
+- Product dossiers/packs
+- Product registry index/exports
+- Licensing framework (TOIL)
+- Governance standards (TLOS)
+- Public community onboarding
 
 ---
 
@@ -56,66 +63,62 @@ Includes:
 Purpose:
 - Active collaboration
 - Team coordination
-- Early-stage development
+- Sensitive internal operations
 
-Includes:
-- Work-in-progress designs
-- Internal discussions
-- Draft documentation
+Includes (private repos):
+- Curriculum and internal enablement
+- Finance operations and models
+- Legal operations and enforcement readiness
 
-Access is level-based.
+Access is role-based and least-privilege.
 
 ---
 
-### C. Core Layer (Private)
+### C. Core Layer (Protected Subset of Private)
 Purpose:
 - Protection of the operating system
 - Cultural and ethical coherence
+- Legal/financial defensibility
 
 Includes:
-- TLOS documents
-- Governance model
-- Internal curriculum
-- Contributor evaluation logic
+- Legal enforcement artifacts
+- Investor-ready finance artifacts
+- Sensitive contributor/identity records (if introduced later)
 
-Access is invitation-only.
+Access is invitation-only and audited.
 
 ---
 
-## 4. Official Repository Structure (Current)
+## 4. Official Repository Structure
 
-Tech4Life & Beyond is organized as a **multi-repo factory system** inside one GitHub organization.
+**Current state (active):** Tech4Life uses a multi-repo structure inside the GitHub organization `tech4life-beyond`.
 
 ### Public repositories (ecosystem base)
-- `tlos` — governance & doctrine (how we operate)
-- `toil` — legal/license baseline + templates
-- `product-registry` — canonical product ID registry + machine-readable exports
-- `product-creation-pipeline` — validation rules + tooling for product packs
-- `products` — product packs / dossiers (one folder per product)
-- `kivai` — interoperability protocol + runtime reference (product-specific)
-- `community` — onboarding, contribution pathways, and collaborator guidance
+- `tlos` — governance and doctrine (this repository)
+- `toil` — license framework, templates, releases
+- `product-registry` — canonical product ID registry + exports
+- `product-creation-pipeline` — pack validation rules + CI profiles
+- `products` — product packs (dossiers/artifacts by lifecycle stage)
+- `community` — public participation and onboarding (when active)
 
 ### Private repositories (strategic core)
-- `armanu-curriculum` — internal contributor capability progression & training ops
-- `finance-private` — financial ops, royalty controls, projections, investor reporting
-- `legal-private` — enforcement readiness, contract ops, IP chain-of-title controls
+- `legal-private` — legal operations artifacts (templates, enforcement playbooks)
+- `finance-private` — monetization logic, royalty controls, projections
+- `armanu-curriculum` — contributor progression and assessment materials
 
-**Rule:** GitHub is the auditable record. The *source of truth* is **distributed by domain**:
-- Governance truth → `tlos`
-- License truth → `toil`
-- Product identity truth → `product-registry`
-- Product-pack quality gates → `product-creation-pipeline`
-- Product dossiers → `products`
-- Legal/finance controls → private repos
+**Rule:** GitHub is the system of record for decisions, releases, and traceability.  
+Runtime implementations live in product-specific repos and must reference these governance standards.
+
+---
 
 ## 5. Access Control Model
 
 Access is governed by contributor level:
 
 - Observer → Public Layer
-- Contributor → Restricted Layer
-- Creator → Restricted + limited Core
-- Architect → Full Core access
+- Contributor → Public + limited collaboration areas (as defined in community)
+- Creator → Collaboration privileges + product workstreams (as granted)
+- Architect → Governance-impact privileges (as granted)
 
 No one has automatic promotion.
 
@@ -125,13 +128,14 @@ No one has automatic promotion.
 
 Every contribution must:
 - Be committed under a real identity
-- Reference the contributor level
+- Reference the contributor level (when relevant)
 - Include a contribution summary
 
 GitHub commit history is considered a legal and ethical record.
 
 ---
 
+<a id="7-kivai-project-decision-framework"></a>
 ## 7. Kivai Project Decision Framework
 
 Existing projects (e.g., Kivai) are evaluated by:

@@ -6,7 +6,9 @@ version: 1.0.0
 effective_date: 2026-02-13
 last_reviewed: 2026-02-13
 owner: Tech4Life Governance (TLOS) + Legal Steward
+last_reviewed_by: optional
 ---
+
 # Tech4Life Operating System (TLOS)
 ## TOIL Integration Framework
 
@@ -41,21 +43,28 @@ TOIL acts as:
 
 ---
 
-## 3. Scope of TOIL Coverage (Default Rule)
+## 3. Default Scope Rule (Canonical)
 
-**Default:** Anything created within Tech4Life & Beyond is **TOIL-covered by default** **unless an explicit exception is documented**.
+**Default rule:** Any asset created within Tech4Life & Beyond is governed by TOIL by default.
 
-- **Internal drafts (private / pre-release):** still fall under the TOIL default internally, but are not “publicly released” until they are published as a product pack or formal public artifact.
-- **Public releases:** when an artifact is published publicly, TOIL terms apply to that public release (and any linked product ID/record).
-
-**Exception policy:** Any non-TOIL asset must include a written exception record (owner, rationale, scope, and alternative license/terms).
-
-TOIL applies to:
+This includes:
 - Physical products
 - Digital products
 - Designs and schematics
 - Documentation
 - Processes and systems
+
+### 3.1 Exceptions (Allowed, but controlled)
+
+An exception is allowed only if it is:
+1. **Explicitly documented** (scope + reason)
+2. **Approved under governance procedure**
+3. **Recorded with effective date** and owner sign-off
+4. **Traceable** (stored in GitHub with a permanent reference)
+
+If no exception record exists, TOIL applies.
+
+---
 
 ## 4. TOIL Registration Process
 
