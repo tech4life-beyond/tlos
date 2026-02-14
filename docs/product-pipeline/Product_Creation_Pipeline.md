@@ -36,12 +36,11 @@ Other documents MAY define implementation profiles, but they MUST map back to th
 
 ---
 
-## 2. Canonical Authority (Precedence)
+## 2. Canonical Lifecycle Definition
 
 This document defines the **canonical Product Creation Lifecycle (PCL)** consisting of **nine (9) stages**.
 
-- Any other TLOS document describing “factory steps” is an **implementation profile** and **must not redefine stages**.
-- If any conflict exists, **this document prevails**.
+Any other TLOS document describing “factory steps” is an **implementation profile** and **must not redefine stages**.
 
 ---
 

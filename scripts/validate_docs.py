@@ -4,8 +4,16 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-MD_FILES = sorted(ROOT.rglob('*.md'))
-REQ = {"document_id", "classification", "status", "version", "effective_date", "last_reviewed", "owner"}
+MD_FILES = sorted(ROOT.rglob("*.md"))
+REQ = {
+    "document_id",
+    "classification",
+    "status",
+    "version",
+    "effective_date",
+    "last_reviewed",
+    "owner",
+}
 
 NORMATIVE_PATHS = {
     "CONTRIBUTING.md",
@@ -26,6 +34,38 @@ NORMATIVE_PATHS = {
 
 errors = []
 
+MOJIBAKE_PATTERNS = (
+    "Ã¡",
+    "Ã©",
+    "Ã­",
+    "Ã³",
+    "Ãº",
+    "Ã±",
+    "Ã¼",
+    "Ã€",
+    "Ã‰",
+    "Ã‘",
+    "Ãœ",
+    "Ã§",
+    "Ã£",
+    "Ãµ",
+    "â€™",
+    "â€˜",
+    "â€œ",
+    "â€�",
+    "â€“",
+    "â€”",
+    "â€¦",
+    "Â ",
+    "Â\n",
+    "Â\t",
+)
+
+
+def has_probable_mojibake(text: str) -> bool:
+    return any(p in text for p in MOJIBAKE_PATTERNS)
+
+
 def slug(s: str) -> str:
     s = s.strip().lower()
     s = re.sub(r"[`*_]", "", s)
@@ -34,19 +74,20 @@ def slug(s: str) -> str:
     s = re.sub(r"-+", "-", s)
     return s
 
+
 anchors = {}
 
 for p in MD_FILES:
     rel = p.relative_to(ROOT).as_posix()
     data = p.read_bytes()
     try:
-        text = data.decode('utf-8')
+        text = data.decode("utf-8")
     except UnicodeDecodeError as e:
         errors.append(f"{rel}: not valid UTF-8 ({e})")
         continue
 
-    # crude but useful mojibake detector for common UTF-8->Latin1 artifacts
-    if re.search(r"[Ãâ�]", text):
+    # Detect common UTF-8 -> Latin-1/Windows-1252 corruption sequences.
+    if has_probable_mojibake(text):
         errors.append(f"{rel}: possible mojibake sequence detected")
 
     file_anchors = set()
@@ -57,32 +98,34 @@ for p in MD_FILES:
     anchors[rel] = file_anchors
 
     if rel in NORMATIVE_PATHS:
-        fm = re.match(r"\A---\n(.*?)\n---\n", text, flags=re.S)
+        fm = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|\Z)", text, flags=re.S)
         if not fm:
             errors.append(f"{rel}: missing YAML front matter")
             continue
         keys = set()
         for ln in fm.group(1).splitlines():
-            if ':' in ln:
-                keys.add(ln.split(':', 1)[0].strip())
+            if ":" in ln:
+                keys.add(ln.split(":", 1)[0].strip())
         missing = sorted(REQ - keys)
         if missing:
-            errors.append(f"{rel}: missing required metadata keys: {', '.join(missing)}")
+            errors.append(
+                f"{rel}: missing required metadata keys: {', '.join(missing)}"
+            )
 
 link_re = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 for p in MD_FILES:
     rel = p.relative_to(ROOT).as_posix()
-    text = p.read_text(encoding='utf-8')
+    text = p.read_text(encoding="utf-8")
     for target in link_re.findall(text):
-        if target.startswith(('http://', 'https://', 'mailto:')):
+        if target.startswith(("http://", "https://", "mailto:")):
             continue
         tgt = target.strip()
-        if tgt.startswith('#'):
+        if tgt.startswith("#"):
             a = tgt[1:]
             if a and a not in anchors.get(rel, set()):
                 errors.append(f"{rel}: broken local anchor #{a}")
             continue
-        path, frag = (tgt.split('#', 1) + [''])[:2]
+        path, frag = (tgt.split("#", 1) + [""])[:2]
         resolved = (p.parent / path).resolve()
         if not resolved.exists():
             errors.append(f"{rel}: broken relative link {target}")
