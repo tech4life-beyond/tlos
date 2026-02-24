@@ -2,10 +2,10 @@
 
 Tech4Life Operating System (TLOS) — governance, doctrine, and factory standards for the Tech4Life & Beyond ecosystem.
 
-## Status del estándar
-- **Versión normativa vigente:** `1.0.0`
-- **Fecha efectiva:** `2026-02-13`
-- **Esquema de versión:** `MAJOR.MINOR.PATCH` (prefijo `v` solo para presentación humana)
+## Standard status
+- **Current normative version:** `1.0.0`
+- **Effective date:** `2026-02-13`
+- **Version scheme:** `MAJOR.MINOR.PATCH` (the `v` prefix is presentation-only)
 
 ## Start here
 - Documentation index (scope + hierarchy): [docs/index.md](docs/index.md)
