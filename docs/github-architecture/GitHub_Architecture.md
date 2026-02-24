@@ -2,11 +2,11 @@
 document_id: TLOS-GH-ARCH-001
 classification: Normative
 status: Active
-version: 1.0.0
-effective_date: 2026-02-13
-last_reviewed: 2026-02-13
+version: 1.0.1
+effective_date: 2026-02-24
+last_reviewed: 2026-02-24
 owner: Tech4Life Governance (TLOS)
-last_reviewed_by: optional
+last_reviewed_by: Architect
 ---
 
 # Tech4Life Operating System (TLOS)
@@ -98,6 +98,7 @@ Access is invitation-only and audited.
 - `toil` — license framework, templates, releases
 - `product-registry` — canonical product ID registry + exports
 - `product-creation-pipeline` — pack validation rules + CI profiles
+- `kivai` — KIVAI platform reference (schema, SDK, runtime contracts)
 - `products` — product packs (dossiers/artifacts by lifecycle stage)
 - `community` — public participation and onboarding (when active)
 
@@ -184,5 +185,5 @@ Any change requires:
 
 ---
 
-**GitHub is our memory.
+**GitHub is our memory.  
 We do not erase memory.**
